@@ -1,0 +1,14 @@
+{
+  "name": "ig-dm-terminal",
+  "version": "1.0.0",
+  "description": "Instagram DM Terminal Client",
+  "main": "terminal-client.js",
+  "scripts": {
+    "start": "node terminal-client.js",
+    "start:config": "node terminal-client.js --config"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "instagram-private-api": "^1.46.1"
+  }
+}
