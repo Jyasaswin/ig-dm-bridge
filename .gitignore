@@ -1,0 +1,8 @@
+node_modules/
+out/
+.igdm_session.json
+server/.igdm_session.json
+*.vsix
+server\.igdm_session.json
+server\.thread_id.json
+server\.threads_cache.json

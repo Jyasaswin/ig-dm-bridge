@@ -1,0 +1,4 @@
+config.json
+.ig-session.json
+node_modules/
+*.log

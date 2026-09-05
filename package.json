@@ -1,0 +1,68 @@
+{
+  "name": "instagram-dm-terminal",
+  "displayName": "Instagram DM Terminal",
+  "description": "Send and receive Instagram DMs from VS Code",
+  "version": "1.0.0",
+  "engines": { "vscode": "^1.74.0" },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "igdm.openPanel",
+        "title": "Open DM Terminal",
+        "category": "IGDM"
+      },
+      {
+        "command": "igdm.hidePanel",
+        "title": "Hide DM Terminal",
+        "category": "IGDM"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "igdm.openPanel",
+        "key": "ctrl+shift+i",
+        "mac": "cmd+shift+i"
+      },
+      {
+        "command": "igdm.hidePanel",
+        "key": "escape",
+        "when": "igdm.panelFocused"
+      }
+    ],
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "igdm-container",
+          "title": "Terminal Logs",
+          "icon": "media/icon.svg"
+        }
+      ]
+    },
+    "views": {
+      "igdm-container": [
+        {
+          "type": "webview",
+          "id": "igdm.chatView",
+          "name": "Debug Console"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "build": "npm run compile"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.74.0",
+    "@types/node": "^18.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "socket.io-client": "^4.6.0"
+  }
+}
