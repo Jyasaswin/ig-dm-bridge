@@ -3,9 +3,15 @@
   "displayName": "Instagram DM Terminal",
   "description": "Send and receive Instagram DMs from VS Code",
   "version": "1.0.0",
-  "engines": { "vscode": "^1.74.0" },
-  "categories": ["Other"],
-  "activationEvents": ["onStartupFinished"],
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
@@ -57,12 +63,13 @@
     "build": "npm run compile"
   },
   "devDependencies": {
-    "@types/vscode": "^1.74.0",
     "@types/node": "^18.0.0",
+    "@types/vscode": "^1.74.0",
     "typescript": "^5.0.0"
   },
   "dependencies": {
     "axios": "^1.6.0",
+    "puppeteer": "^25.10.0",
     "socket.io-client": "^4.6.0"
   }
 }
