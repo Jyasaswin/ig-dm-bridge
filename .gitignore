@@ -8,3 +8,5 @@ server/.igdm_session.json
 
 server/.thread_id.json
 server/.threads_cache.json
+server/chrome-profile/
+server/chrome-profile/**
